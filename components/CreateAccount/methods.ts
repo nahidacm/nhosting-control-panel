@@ -6,7 +6,7 @@ const requestAccount = async (
   accountName: String
 ) => {
   axios
-    .post("/api/hello", { accountName: accountName })
+    .post("/api/accounts/create", { accountName: accountName })
     .then( response => {
       console.log(response.data);
     })
