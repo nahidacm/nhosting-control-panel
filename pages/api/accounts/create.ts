@@ -20,7 +20,7 @@ export default function handler(
   //   console.log("Output: \n", output);
   // });
 
-  const command = spawn("sudo", ["useradd", "-m", "-d", `/opt/${username}`, `${username}`]);
+  const command = spawn("useradd", ["-m", "-d", `/opt/${username}`, `${username}`]);
   command.stdout.on("data", (output) => {
     console.log("Output: ", output.toString());
   });
